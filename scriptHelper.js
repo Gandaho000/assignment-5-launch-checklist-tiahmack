@@ -43,25 +43,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         window.alert("Please enter a name for pilot and copilot");
     } else {
 
-
-        // if (fuelLevel < 10000) {
-        //     pilotStatus.innerHTML = "Pilot Ready";
-        //     copilotStatus.innerHTML = "Co-pilot ready";
-        //     list.style.visability = "hidden";
-        //     fuelStatus.innerHTML = "Fuel level high enough for launch";
-        //     cargoStatus.innerHTML = "Cargo mass low enough for launch";
-        //     h2.innerHTML = "Shuttle not ready for launch";
-        // }
-        // if (fuelLevel < 10000) {
-        //     pilotStatus.innerHTML = "Pilot Ready";
-        //     copilotStatus.innerHTML = "Co-pilot ready";
-        //     list.style.visability = "hidden";
-        //     fuelStatus.innerHTML = "Fuel level high enough for launch";
-        //     cargoStatus.innerHTML = "Cargo mass low enough for launch";
-        //     h2.innerHTML = "Shuttle not ready for launch";
-        // }
-
-
         if (fuelLevel < 10000) {
             pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
             copilotStatus.innerHTML = `Copilot ${copilot} is ready for launch`;
@@ -80,7 +61,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
             h2.innerHTML = "Shuttle not ready for launch"
             h2.style.color = "rgb(199, 37, 78)";
         }
-        if (fuelLevel < 10000 || cargoMass > 10000) {
+        if (fuelLevel < 10000 && cargoMass > 10000) {
             pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
             copilotStatus.innerHTML = `Copilot ${copilot} is ready for launch`;
             list.style.visability = "visable";
@@ -89,7 +70,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
             h2.innerHTML = "Shuttle not ready for launch"
             h2.style.color = "rgb(199, 37, 78)";
         }
-        if (fuelLevel >= 10000 || cargoMass <= 10000) {
+        if (fuelLevel >= 10000 && cargoMass <= 10000) {
             pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
             copilotStatus.innerHTML = `Copilot ${copilot} is ready for launch`;
             list.style.visability = "visable";
